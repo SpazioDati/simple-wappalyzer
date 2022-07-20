@@ -55,7 +55,7 @@ module.exports = async ({ url, headers, html }) => {
     url,
     meta: getMeta(dom.window.document),
     headers: getHeaders(headers),
-    scripts: getScripts(dom.window.document.scripts),
+    scriptSrc: getScripts(dom.window.document.scripts),
     cookies: getCookies(getHeader(headers, 'set-cookie')),
     html: dom.serialize()
   })
